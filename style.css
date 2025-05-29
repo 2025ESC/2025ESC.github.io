@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: var(--hansung-blue);
+    background-color: #181a1b;
     color: #fff;
     padding: 20px;
 }
@@ -26,7 +26,7 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #5fd1f9; /* 밝은 하늘색으로 변경 */
+    color: #5fd1f9; /* 로고 색상 변경 */
 }
 
 nav {
@@ -46,18 +46,18 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* 메뉴 텍스트 색상 변경 */
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--hansung-yellow);
+    color: var(--hansung-yellow); /* 메뉴 호버 색상 변경 */
 }
 
 .hero {
     padding: 100px 20px;
     text-align: center;
-    background: linear-gradient(135deg, var(--hansung-blue) 60%, var(--hansung-dark) 100%);
+    background-color: var(--hansung-blue);
     color: var(--hansung-light);
 }
 
