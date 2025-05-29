@@ -6,7 +6,7 @@
 }
 
 :root {
-    --hansung-blue: #14213d; /* 남색 계열로 변경 */
+    --hansung-blue: #14213d;
     --hansung-yellow: #ffe066;
     --hansung-dark: #181a1b;
     --hansung-light: #f4f8fb;
@@ -17,16 +17,30 @@ body {
     color: var(--hansung-light);
 }
 
+body[data-theme='light'] {
+    background-color: var(--hansung-light);
+    color: #222;
+}
+
 header {
-    background-color: #181a1b;
-    color: #fff;
+    background-color: #232526;
+    color: #5fd1f9;
     padding: 20px;
+}
+
+body[data-theme='light'] header {
+    background-color: #e0e0e0;
+    color: #14213d;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #5fd1f9; /* 로고 색상 변경 */
+}
+
+body[data-theme='light'] .logo {
+    color: var(--hansung-blue);
 }
 
 nav {
@@ -50,13 +64,26 @@ nav ul li a {
     transition: color 0.3s;
 }
 
+body[data-theme='light'] nav ul li a {
+    color: var(--hansung-blue);
+}
+
 nav ul li a:hover {
     color: var(--hansung-yellow); /* 메뉴 호버 색상 변경 */
+}
+
+body[data-theme='light'] nav ul li a:hover {
+    color: #222;
 }
 
 .hero {
     padding: 100px 20px;
     text-align: center;
+    background-color: var(--hansung-blue);
+    color: var(--hansung-light);
+}
+
+body[data-theme='light'] .hero {
     background-color: var(--hansung-blue);
     color: var(--hansung-light);
 }
@@ -74,6 +101,11 @@ nav ul li a:hover {
     padding: 50px 20px;
     text-align: center;
     background-color: #232526;
+}
+
+body[data-theme='light'] .content {
+    background-color: #f4f8fb;
+    color: #222;
 }
 
 .content h2 {
@@ -98,6 +130,12 @@ nav ul li a:hover {
     width: 250px;
 }
 
+body[data-theme='light'] .card {
+    background: #fff;
+    color: #222;
+    border: 2px solid var(--hansung-blue);
+}
+
 .card h3 {
     margin-bottom: 15px;
 }
@@ -109,6 +147,35 @@ nav ul li a:hover {
     color: #fff;
 }
 
+body[data-theme='light'] .footer {
+    background-color: var(--hansung-blue);
+    color: #fff;
+}
+
 .footer h2 {
     margin-bottom: 10px;
+}
+
+#theme-toggle {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    top: auto;
+    right: auto;
+    z-index: 1000;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    background: var(--hansung-blue);
+    color: #5fd1f9;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.2s, color 0.2s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
